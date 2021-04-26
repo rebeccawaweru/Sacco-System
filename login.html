@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+        <h2><strong>NICHE SACCO</strong></h2>
+      <form id="log">
+
+        <h4><span class="reg">LOG</span> IN</h4>
+            <br>
+          
+           <div>
+               <label for="email">Email</label>
+               <br>
+               <input type="email" class="inputreg" id="email" required>
+           </div>
+           <br>
+
+           <div>
+            <label for="password">Password</label>
+            <br>
+            <input type="password" class="inputreg" id="password" required>
+        </div>
+        <br>
+        <br>  
+
+          <div>
+            <label for="account">Account type:</label>
+            <select id="account">
+              <option value=""></option>
+              <option value="Admin">Admin</option>
+              <option value="Accountant">Accountant</option>
+              <option value="User">User</option>
+
+          </select>
+        </div>
+        <br>
+
+        <button type="button" class="btn" id="btn2">Log In</button>
+        <br>
+        <br>
+        <br>
+        Don't have an account? <a href="register.html">Register</a>
+
+      </form>
+
+        </div>
+    </header>
+     
+
+    
+
+
+</body>
+
+<script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-firestore.js"></script>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyA2Ov-aEb_MjqR3-RNxdml0VQBLXu8fEvc",
+    authDomain: "niche-sacco.firebaseapp.com",
+    projectId: "niche-sacco",
+    storageBucket: "niche-sacco.appspot.com",
+    messagingSenderId: "249092052245",
+    appId: "1:249092052245:web:e7cb84a25b57c5da1b451c",
+    measurementId: "G-F2TF2E1EGW"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+
+
+
+<script src="js/login.js"></script>
+</html>
