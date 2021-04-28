@@ -102,6 +102,13 @@ form{
     cursor:pointer;
     border: none;
 }
+#request{
+    background-color: blue;
+    color: white;
+    width: 200px;
+    cursor:pointer;
+    border: none; 
+}
 
 .content2{
     display: none;
@@ -120,5 +127,17 @@ th{
 
 }
 .content3{
+    display: none;
+}
+
+tr.td{
+    color: black;
+}
+
+.btnprint{
+    background-color: red;
+}
+
+.contentII{
     display: none;
 }

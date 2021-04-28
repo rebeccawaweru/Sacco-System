@@ -3,10 +3,11 @@
 
             var FullName = document.getElementById("fullname").value ;
             var Username = document.getElementById("username").value ;
+            var phoneNumber = document.getElementById("phone").value;
             var Email = document.getElementById("email").value ;
+            var IDNo = document.getElementById("idno").value ;
             var Password = document.getElementById("password").value ;
             var Password1 = document.getElementById("password1"). value ;
-
             var Accounttype = document.getElementById("account"). value;
 
             // var myTimestamp = firebase.firestore.Timestamp.fromDate(new Date());
@@ -21,13 +22,16 @@
 
 
             // Add a new document in collection "cities"
-                firebase.firestore().collection("users").doc().set({
+                firebase.firestore().collection("users").doc(user.uid).set({
                   
                 UserFullName : FullName,
                 TheUsername : Username,
+                Mobile : phoneNumber,
                 EmailValue : Email,
+                IDValue : IDNo,
                 ThePassword : Password,
-                UserType : Accounttype
+                UserType : Accounttype,
+                userID:user.uid
                 
                 })
                 .then(() => {
