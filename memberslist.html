@@ -44,67 +44,31 @@
   <li><i class="fa fa-cog" aria-hidden="true"></i></li>
 </ul>
 </div>
-
-<div class="content1" id="content1">
-
-  <!-- display username -->
- <p>Welcome</p>
- <p id="displayname" class="welcome"></p>
-
-
-<div class="container">
-
-   <div class="one">
-   Accumulative Funds <br>
-   KES 436,000
-   </div>
-
-   <div class="two">
-     Funds Lent Out <br>
-     KES 214,000
-</div>
-
-<div class="three">
-     Total Members <br>
-       16
-</div>
-  </div>
-
-  
-
-</div>
-
-
-
-
-
- 
-
-  <div class="content5" id="content5">
-    <p><strong>Loan Details</strong></p>
+<div class="content3" id="content3">
+    <p><strong>Members List</strong></p>
     <br>
     <br>
-    <p>
-    Name:    <br>
-    Phone:    <br>
-    email:     <br>
-    Loan amount:   <br>
-    Loan Duration:  <br>
-    Request date:     <br>
-    </p>
-    <br>
+    
 
-    <div class="review">
-   <button type="button" id="approve">Approve</button>
-   <button type="button" id="reject">Reject</button>
-   
-  </div>
-  <div class = reason>
-  <label>If rejected, state the reason why</label>
-  <textarea name="text" id="rejectms" cols="10" rows="5"></textarea>
+    <table>
+
+       <tr>
+        <th>Full Name</th>
+        <th>Username</th>
+        <th>Phone Number</th>
+        <th>email</th>
+        <th>ID Number</th>
+        <th>Password</th>
+        <th>Print</th>
+       </tr>
+<tbody id="memberslist">
+
+</tbody>
+       
+
+        </table>
+       
 </div>
-
-  </div>
 
 </header>
 
@@ -144,11 +108,7 @@
   firebase.analytics();
 </script>
 
-<script src="js/admin.js"></script>
+<script src="js/memberslist.js"></script>
 
 
 </html>
-
-
-
-

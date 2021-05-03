@@ -44,13 +44,30 @@ header{
     position: absolute;
     background-color: whitesmoke;
     margin-left: 20%;
+    display: flex;
 }
+ul{
+ right: 10%;
+    position: absolute;
+}
+li{
+    display: inline;
+    list-style: none;
+    color: black;
+    justify-content: center;
+    margin: 10px;
+}
+
+
+
 p{
     color: black;
    padding-top: 50px;
     position: absolute;
     margin-left: 30%;
 }
+
+
 .container{
     margin-top: 80px ;
     margin-left: 30% !important ;
@@ -95,6 +112,11 @@ form{
     margin-left: 30% !important ;
 
 }
+
+.form{
+    margin-top: 80px ;
+    margin-left: 30% !important ;  
+}
 #addmem{
     background-color: blue;
     color: white;
@@ -110,9 +132,7 @@ form{
     border: none; 
 }
 
-.content2{
-    display: none;
-}
+
  
 table{
     margin-top: 80px ;
@@ -126,9 +146,7 @@ th{
    color: white;
 
 }
-.content3{
-    display: none;
-}
+
 
 tr.td{
     color: black;
@@ -138,6 +156,52 @@ tr.td{
     background-color: red;
 }
 
-.contentII{
+
+
+
+#view{
+    background-color: green;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+#displayname{
+    color:white;
+}
+.content5{
+    display: none;
+    color: black;
+}
+.review{
+    display: flex;
+    position: absolute;
+    margin: 30%;
+    margin-top: 200px;
+
+}
+
+#approve{
+    background-color: green;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+#reject{
+    background-color: red;
+    cursor: pointer;
+}
+
+.reason{
+    display: flex;
+    position: absolute;
+    margin: 30%;
+    margin-top: 250px;
+}
+h6{
+    color: black;
+}
+
+#modal{
     display: none;
 }
+

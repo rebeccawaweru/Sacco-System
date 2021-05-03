@@ -1,13 +1,13 @@
-
-document.getElementById("member").onclick = function(){
-
-    document.getElementById("content1").style.display= "none";
-    document.getElementById("content2").style.display="none";
-    document.getElementById("content3").style.display="block";
-    
-
-   
+document.getElementById("requestln").onclick =function(){
+  window.location.href = "requestloan.html";
 }
+
+document.getElementById("dash").onclick =function(){
+  window.location.href = "dashboard.html";
+}
+
+
+
 
 firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
@@ -15,50 +15,53 @@ firebase.auth().onAuthStateChanged(function(user) {
       var loggedInUser = user.uid ;
       console.log(loggedInUser) ;
 
+       var User1 = "user";
+       
+          firebase.firestore().collection("users").where("UserType", "==", User1)
+        .get()
+        .then((querySnapshot) => {
+            querySnapshot.forEach((doc) => {
+                // doc.data() is never undefined for query doc snapshots
+                console.log(doc.id, " => ", doc.data());
+                var uType = doc.data().UserType ;
 
-      document.getElementById("add").onclick =function(){
+                var Display = document.getElementById("displayname");
+                Display.innerHTML = doc.data().TheUsername;
+                
+                if (uType == User1){
+                
+                  document.getElementById("requestln").onclick =function(){
+                      window.location.href = "requestloan.html";
+                }
+            
+                document.getElementById("dash").onclick =function(){
+                      window.location.href = "dashboard.html";
+                }
 
-        document.getElementById("contentI").style.display="none";
-    
-        // document.getElementById("content3").style.display="none";
-    
-        document.getElementById("contentII").style.display= "block";
-    
-    }
+                }
+                else {
+                  if(uType == "accountant"){
+                     window.location.href = "acc-dashboard.html";
 
-    document.getElementById("dash").onclick =function(){
+                 }else if(uType == "user"){
+                     window.location.href = "dashboard.html";
+                 }
+               }
 
-
-        // document.getElementById("content3").style.display="none";
-    
-        document.getElementById("contentII").style.display= "none";
-    
-        document.getElementById("contentI").style.display="block";
-    
-    }
-
-    document.getElementById("request").onclick = function (){
-
-        var loanAmount = document.getElementById("loanamount").value ;
-
-        var loanDuration = document.getElementById("loanduration").value ;
-
-        // Add a new document in collection "cities"
-        firebase.firebase().collection("loanrequests").doc(user.uid).set({
-                RequestAmount : loanAmount,
-                Duration : loanDuration,
-                UserId : user.uid
-            })
-            .then(() => {
-            console.log("Document successfully written!");
-            })
-            .catch((error) => {
-            console.error("Error writing document: ", error);
             });
+        })
+        .catch((error) => {
+            console.log("Error getting documents: ", error);
+        });
 
-    }
+       
 
     } else {
       // No user is signed in.
     }
   });
+
+    
+
+           
+  

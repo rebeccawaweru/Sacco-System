@@ -9,10 +9,8 @@
     <script src="https://kit.fontawesome.com/024c8796dc.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src= "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
 </head>
 <body>
-
     <header>
         <div class="left-column">
             <h4 class="fanisi">Niche Sacco</h4>
@@ -20,66 +18,58 @@
             <div class="profile">
                 <div class="circle"></div>
                 <p id="displayname"></p><br>
-              
+               
             </div>
-             User
-          
+           user
+          <br>
+          <br>
              
           
             <button type="button" class="btn2" id="dash">Dashboard</button>
-            <button type="button" class="btn2" id="requestln">Request Loan</button>
-            <button type="button" class="btn2" id="member">View Member List</button>
-            <button type="button" class="btn2" id="myloans">My Loan Requests</button>
-            <button type="button" class="btn2">Sacco projects</button>
+            <button type="button" class="btn2" id="req">Request for a loan</button>
+            <button type="button" class="btn2" id="member">Membership</button>
+            <button type="button" class="btn2"  id="myloan">Loan Request</button>
+            <button type="button" class="btn2">Loan List</button>
             <button type="button" class="btn2">Inbox</button>
-            <button type="button" class="btn2">Settings</butto>
+            <button type="button" class="btn2">Settings</button>
+             
+    
     
         </div>
-
-
     <div class="navbar">
-        <ul>
-            <li><i class="fa fa-envelope-o" aria-hidden="true"></i></li> 
-            <!-- notifications -->
-             <li><i class="fa fa-bell-o" aria-hidden="true"></i></li>
-             <!-- modal -->
-             <!-- <div class="modal" tabindex="-1" role="dialog">
-                <div class="modal-dialog" role="document">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title">Notifications</h5>
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                      </button>
-                    </div>
-                    <div class="modal-body" id="modal">
-                      <p>Modal body text goes here.</p>
-
-                      <div class="notcircle"></div>
-                      <h4>Loan Approved</h4>
-                      <p>Your Loan Request of Ksh has been approved</p>
-                      
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-primary">Save changes</button>
-                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    </div>
-                  </div>
-                </div>
-              </div> -->
-            <!-- endofnotification -->
-             <li><i class="fa fa-cog" aria-hidden="true"></i></li>
-           </ul>
+      <ul>
+     <li><i class="fa fa-envelope-o" aria-hidden="true"></i></li> 
+      <li><i class="fa fa-bell-o" aria-hidden="true"></i></li>
+      <li><i class="fa fa-cog" aria-hidden="true"></i></li>
+    </ul>
     </div>
+  <div class="contentI" id="contentI">
 
-    <div class="contentI" id="contentI">
+  </div>
 
-    </div>
+  <div class="contentII" id="contentII">
+    <p><strong>Request for a loan</strong></p>
+    <br>
+    <br>
+  <div class="form">
+   
+     <label>Loan Amount</label>
+     <input type="number" id="loanamount"><br><br>
+
+     <label>Loan Duration</label>
+     <input type="number" id="loanduration" placeholder="months"><br><br>
+
+     <button type="button" id="request">Request Loan</button>
+   </div>
+  </div>
     
-       
-</header>
-</body>
-<!-- <script src="js/config.js"></script> -->
+
+
+  </header>  
+    
+
+
+  <!-- <script src="js/config.js"></script> -->
 
     <!-- The core Firebase JS SDK is always required and must be listed first -->
 <!-- The core Firebase JS SDK is always required and must be listed first -->
@@ -108,5 +98,7 @@
   firebase.initializeApp(firebaseConfig);
   firebase.analytics();
 </script>
-<script src="js/dashboard.js"></script>
+<script src="js/dashboard2.js"></script>
+</html>
+</body>
 </html>
