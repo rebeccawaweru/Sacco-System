@@ -205,3 +205,9 @@ h6{
     display: none;
 }
 
+#searchbar{
+    color: black;
+    padding-top: 40px;
+     position: absolute;
+     margin-left: 30%;
+}

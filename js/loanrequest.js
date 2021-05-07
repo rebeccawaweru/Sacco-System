@@ -12,11 +12,11 @@ firebase.auth().onAuthStateChanged(function(user) {
            querySnapshot.forEach((doc) => {
                // doc.data() is never undefined for query doc snapshots
                console.log(doc.id, " => ", doc.data());
-              var uType=doc.data().UserType ;
+              var uType = doc.data().UserType ;
  
-               if(uType===admins){
-                   var Display = document.getElementById("displayname");
-                   Display.innerHTML = doc.data().TheUsername;
+               if(uType == admins){
+                //    var Display = document.getElementById("displayname");
+                //    Display.innerHTML = doc.data().TheUsername;
 
 
 
@@ -83,15 +83,15 @@ firebase.auth().onAuthStateChanged(function(user) {
                 content += '<td>' + PhoneNo + '</td>';
                 content += '<td>' + Amount + '</td>';
                 content += '<td>' + Due + '</td>';
-                content += '<td>' + '<a href =" " id="view" >View More </a>';
+                content += '<td>' + '<a href = "" id="view" >View More </a>';
                 content += '</tr>';
     
             });
-    
+
             $('#loanlist').append(content);
     
             }); 
-    
+           
         })
         .catch((error) => {
             console.log("Error getting documents: ", error);
